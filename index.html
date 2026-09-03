@@ -270,7 +270,7 @@
     .contact-card p { margin: 0; color: var(--muted); line-height: 1.65; font-size: 17px; }
     .contact-details {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
       grid-auto-rows: 1fr;
       gap: 12px;
       margin-top: 26px;
@@ -334,7 +334,7 @@
 
     .contact-layout {
       display: grid;
-      grid-template-columns: 1.35fr .65fr;
+      grid-template-columns: 1fr;
       gap: 18px;
       align-items: start;
     }
@@ -589,40 +589,6 @@
           </div>
         </div>
 
-        <div class="form-card">
-          <span class="eyebrow">Formulário</span>
-          <h3 style="margin-top:18px">Envie sua solicitação</h3>
-          <p>Preencha os dados abaixo para facilitar o primeiro atendimento. Se preferir, você também pode chamar diretamente no WhatsApp.</p>
-          <form class="contact-form" action="mailto:victormatos.ti@hotmail.com" method="post" enctype="text/plain">
-            <label>
-              Nome
-              <input type="text" name="nome" placeholder="Digite seu nome" required />
-            </label>
-            <label>
-              Telefone ou e-mail
-              <input type="text" name="contato" placeholder="Informe um contato para retorno" required />
-            </label>
-            <label>
-              Serviço desejado
-              <select name="servico" required>
-                <option value="">Selecione um serviço</option>
-                <option>Formatação de Sistema (com ou sem backup)</option>
-                <option>Ativação do Microsoft Office</option>
-                <option>Ativação do Windows</option>
-                <option>Limpeza Interna e Manutenção Preventiva</option>
-                <option>Serviços para Impressoras</option>
-                <option>Configuração de Rede Wi‑Fi</option>
-                <option>Outro atendimento</option>
-              </select>
-            </label>
-            <label>
-              Descreva o que você precisa
-              <textarea name="mensagem" placeholder="Explique o problema ou o serviço que deseja solicitar" required></textarea>
-            </label>
-            <button class="btn btn-dark" type="submit">Enviar solicitação</button>
-          </form>
-          <div class="form-note">Obs.: este formulário utiliza o aplicativo de e-mail do seu dispositivo para o envio. Se preferir um atendimento mais rápido, use o WhatsApp.</div>
-        </div>
       </div>
     </section>
   </main>
