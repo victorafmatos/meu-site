@@ -512,14 +512,14 @@
         <div class="why-main">
           <div>
             <span class="mini">Atendimento técnico</span>
-            <h2>Atendimento técnico com confiança, agilidade e transparência.</h2>
+            <h2>Soluções técnicas para manter seus equipamentos seguros e funcionando.</h2>
           </div>
-          <p>Serviço profissional e de qualidade, com um preço justo e agilidade.</p>
+          <p>Do diagnóstico à conclusão, cada serviço é executado com cuidado, clareza e atenção às necessidades do seu equipamento.</p>
         </div>
         <div class="why-list">
-          <article class="why-item"><span class="n">01</span><h3>Atendimento profissional</h3><p>Cada serviço é realizado com responsabilidade, cuidado técnico e foco em qualidade.</p></article>
-          <article class="why-item"><span class="n">02</span><h3>Agilidade no suporte</h3><p>Retorno rápido para orçamento, diagnóstico inicial e alinhamento do atendimento.</p></article>
-          <article class="why-item"><span class="n">03</span><h3>Preço justo</h3><p>Serviço técnico com clareza nas condições e foco no melhor custo-benefício para o cliente.</p></article>
+          <article class="why-item"><span class="n">01</span><h3>Diagnóstico técnico cuidadoso</h3><p>Análise responsável de computadores, notebooks, impressoras e redes Wi-Fi para identificar a solução adequada antes da execução do serviço.</p></article>
+          <article class="why-item"><span class="n">02</span><h3>Serviços executados com segurança</h3><p>Formatação, backup, ativações e manutenção preventiva realizados com organização e cuidado para preservar seus equipamentos e arquivos.</p></article>
+          <article class="why-item"><span class="n">03</span><h3>Transparência em cada etapa</h3><p>Explicação clara sobre o serviço necessário, as condições do atendimento e os procedimentos realizados, sem complicação ou surpresa.</p></article>
         </div>
       </div>
     </section>
