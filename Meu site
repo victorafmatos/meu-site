@@ -495,7 +495,7 @@
 
           <article class="service-card">
             <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 9V3h12v6"/><rect x="4" y="9" width="16" height="8" rx="2"/><path d="M7 14h10v7H7z"/><path d="M17 12h.01"/></svg></div>
-            <div><h3>Serviços para Impressoras</h3><p>Instalação, configuração, diagnóstico e manutenção de impressoras, conforme a necessidade do equipamento.</p></div>
+            <div><h3>Configuração e instalação de impressoras</h3><p>Instalação, configuração, diagnóstico e manutenção de impressoras, conforme a necessidade do equipamento.</p></div>
           </article>
 
           <article class="service-card">
