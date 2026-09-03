@@ -567,13 +567,6 @@
           </article>
         </div>
 
-        <div class="payment">
-          <div class="card-icon" aria-hidden="true"></div>
-          <div style="flex:1">
-            <strong>Cartão de crédito em até 4x sem juros</strong>
-            <p>(Sujeito à taxa da maquininha)</p>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -648,6 +641,29 @@
           </div>
         </div>
 
+      </div>
+    </section>
+    <section class="section" id="pagamentos" aria-labelledby="pagamentos-titulo">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="pagamentos-titulo">Formas de pagamento</h2>
+        </div>
+        <div class="payment">
+          <svg width="48" height="40" viewBox="0 0 48 40" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="flex-shrink:0">
+            <path d="m24 3 17 17-17 17L7 20Z" />
+            <path d="m10 17 8 0 6 6 6-6h8M10 23h8l6-6 6 6h8" stroke-linejoin="round" />
+          </svg>
+          <div style="flex:1">
+            <strong>Pix à vista</strong>
+          </div>
+        </div>
+        <div class="payment">
+          <div class="card-icon" aria-hidden="true"></div>
+          <div style="flex:1">
+            <strong>Cartão de crédito em até 4x sem juros</strong>
+            <p>(Sujeito à taxa da maquininha)</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
