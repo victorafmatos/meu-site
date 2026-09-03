@@ -29,6 +29,8 @@
         var(--bg);
       font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       -webkit-font-smoothing: antialiased;
+      text-align: justify;
+      text-justify: inter-word;
     }
 
     a { color: inherit; text-decoration: none; }
@@ -200,7 +202,7 @@
     .service-icon svg { width: 28px; height: 28px; stroke: currentColor; stroke-width: 1.8; fill: none; stroke-linecap: round; stroke-linejoin: round; }
     .service-card h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.25; letter-spacing: -.015em; }
     .service-card p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.55; }
-    .price { padding-left: 10px; white-space: nowrap; text-align: right; font-size: 20px; font-weight: 900; letter-spacing: -.03em; }
+    .price { padding-left: 10px; white-space: nowrap; font-size: 20px; font-weight: 900; letter-spacing: -.03em; }
     .price small { display: block; color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 4px; }
 
     .payment {
@@ -289,7 +291,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      text-align: center;
+      text-align: justify;
       transition: transform .2s ease, border-color .2s ease, background .2s ease;
     }
     .contact-link:hover { transform: translateY(-2px); border-color: #aaa; background: #fff; }
@@ -406,7 +408,7 @@
       .section { padding: 54px 0; }
       .service-card { min-height: 0; grid-template-columns: 50px 1fr; padding: 20px; }
       .service-icon { width: 50px; height: 50px; border-radius: 15px; }
-      .price { grid-column: 2; padding-left: 0; text-align: left; margin-top: 2px; font-size: 19px; }
+      .price { grid-column: 2; padding-left: 0; margin-top: 2px; font-size: 19px; }
       .price small { display: none; }
       .payment { align-items: flex-start; flex-direction: column-reverse; }
       .why-main, .contact-card { padding: 28px; }
