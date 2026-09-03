@@ -203,19 +203,19 @@
     .price small { display: block; color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 4px; }
 
     .payment {
-      margin-top: 26px;
-      padding: 26px 28px;
-      border-radius: 22px;
+      margin-top: 20px;
+      padding: 16px 20px;
+      border-radius: 18px;
       background: #0a0a0a;
       color: #fff;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 26px;
+      gap: 18px;
     }
-    .payment strong { font-size: clamp(20px, 3vw, 30px); letter-spacing: -.025em; }
-    .payment p { margin: 6px 0 0; color: #bdbdbd; font-size: 13px; }
-    .card-icon { width: 58px; height: 42px; border: 2px solid #fff; border-radius: 9px; position: relative; flex: 0 0 auto; }
+    .payment strong { font-size: clamp(17px, 2vw, 22px); letter-spacing: -.025em; }
+    .payment p { margin: 4px 0 0; color: #bdbdbd; font-size: 12px; }
+    .card-icon { width: 48px; height: 34px; border: 2px solid #fff; border-radius: 8px; position: relative; flex: 0 0 auto; }
     .card-icon::before { content: ""; position: absolute; left: 0; right: 0; top: 10px; height: 2px; background: #fff; }
     .card-icon::after { content: ""; position: absolute; left: 8px; bottom: 8px; width: 18px; height: 3px; border-radius: 3px; background: #fff; }
 
@@ -239,6 +239,7 @@
     .why-main p { margin: 30px 0 0; color: #c8c8c8; line-height: 1.7; }
     .why-list { display: grid; gap: 16px; }
     .why-item { background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 26px; }
+    .why-list:has(.why-item:only-child) .why-item { display: flex; flex-direction: column; justify-content: center; padding: 38px; }
     .why-item .n { font-size: 12px; color: #777; font-weight: 800; letter-spacing: .12em; }
     .why-item h3 { margin: 34px 0 8px; font-size: 22px; letter-spacing: -.025em; }
     .why-item p { margin: 0; color: var(--muted); line-height: 1.6; font-size: 14px; }
@@ -264,7 +265,7 @@
       z-index: 0;
       pointer-events: none;
     }
-    .contact-content { position: relative; z-index: 1; max-width: 680px; }
+    .contact-content { position: relative; z-index: 1; max-width: none; }
     .contact-card h2 { margin: 0 0 14px; font-size: clamp(38px, 5vw, 62px); letter-spacing: -.045em; line-height: 1.03; }
     .contact-card p { margin: 0; color: var(--muted); line-height: 1.65; font-size: 17px; }
     .contact-details {
@@ -286,6 +287,8 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
+      text-align: center;
       transition: transform .2s ease, border-color .2s ease, background .2s ease;
     }
     .contact-link:hover { transform: translateY(-2px); border-color: #aaa; background: #fff; }
@@ -293,11 +296,10 @@
     .contact-link strong {
       max-width: 100%;
       margin-top: 6px;
-      font-size: clamp(15px, 1.45vw, 18px);
+      font-size: clamp(14px, 1.25vw, 17px);
       line-height: 1.3;
       letter-spacing: -.02em;
-      overflow-wrap: anywhere;
-      word-break: break-word;
+      white-space: nowrap;
     }
     .contact-hint { margin-top: 7px; color: #777; font-size: 12px; font-weight: 650; }
     .contact-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
@@ -332,7 +334,7 @@
 
     .contact-layout {
       display: grid;
-      grid-template-columns: 1.05fr .95fr;
+      grid-template-columns: 1.35fr .65fr;
       gap: 18px;
       align-items: start;
     }
@@ -380,6 +382,10 @@
 
     footer { padding: 28px 0 42px; color: #777; font-size: 13px; }
     .footer-row { display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); padding-top: 24px; }
+
+    @media (max-width: 1100px) {
+      .contact-layout { grid-template-columns: 1fr; }
+    }
 
     @media (max-width: 940px) {
       .nav-links { display: none; }
@@ -434,7 +440,7 @@
         <div>
           <span class="eyebrow">Suporte e manutenção</span>
           <h1>Suporte em informática com agilidade, confiança e atendimento profissional.</h1>
-          <p>Atendimento técnico para computadores, notebooks, impressoras e rede Wi‑Fi, com suporte profissional, preço justo e soluções sob medida para a sua necessidade.</p>
+          <p>Soluções objetivas e simples para resolver o seu problema. Atendimento técnico para computadores, notebooks, impressoras e rede Wi‑Fi, com suporte profissional, preço justo e soluções sob medida para a sua necessidade.</p>
           <div class="hero-actions">
             <a class="btn btn-dark" href="#servicos">Ver serviços</a>
           </div>
@@ -501,7 +507,7 @@
           <div class="card-icon" aria-hidden="true"></div>
           <div style="flex:1">
             <strong>Cartão de crédito em até 4x sem juros</strong>
-            <p>* Sujeito à taxa da maquininha.</p>
+            <p>(Sujeito à taxa da maquininha)</p>
           </div>
         </div>
       </div>
@@ -517,9 +523,7 @@
           <p>Do diagnóstico à conclusão, cada serviço é executado com cuidado, clareza e atenção às necessidades do seu equipamento.</p>
         </div>
         <div class="why-list">
-          <article class="why-item"><span class="n">01</span><h3>Diagnóstico técnico cuidadoso</h3><p>Análise responsável de computadores, notebooks, impressoras e redes Wi-Fi para identificar a solução adequada antes da execução do serviço.</p></article>
-          <article class="why-item"><span class="n">02</span><h3>Serviços executados com segurança</h3><p>Formatação, backup, ativações e manutenção preventiva realizados com organização e cuidado para preservar seus equipamentos e arquivos.</p></article>
-          <article class="why-item"><span class="n">03</span><h3>Transparência em cada etapa</h3><p>Explicação clara sobre o serviço necessário, as condições do atendimento e os procedimentos realizados, sem complicação ou surpresa.</p></article>
+          <article class="why-item"><span class="n">01</span><h3>Atendimento técnico completo e transparente</h3><p>Diagnóstico cuidadoso e serviços executados com segurança em computadores, notebooks, impressoras e redes Wi-Fi. Cada etapa é explicada com clareza, desde a identificação do problema até a conclusão do atendimento.</p></article>
         </div>
       </div>
     </section>
