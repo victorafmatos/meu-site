@@ -239,12 +239,8 @@
     .why-main .mini { color: #aaa; font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
     .why-main h2 { margin: 16px 0 0; font-size: clamp(34px, 4.5vw, 58px); line-height: 1.02; letter-spacing: -.045em; }
     .why-main p { margin: 30px 0 0; color: #c8c8c8; line-height: 1.7; }
-    .why-list { display: grid; gap: 16px; }
-    .why-item { background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 26px; }
-    .why-list:has(.why-item:only-child) .why-item { display: flex; flex-direction: column; justify-content: center; padding: 38px; }
-    .why-item .n { font-size: 12px; color: #777; font-weight: 800; letter-spacing: .12em; }
-    .why-item h3 { margin: 34px 0 8px; font-size: 22px; letter-spacing: -.025em; }
-    .why-item p { margin: 0; color: var(--muted); line-height: 1.6; font-size: 14px; }
+    .why-photo { position: relative; margin: 0; min-height: 360px; overflow: hidden; border-radius: 28px; background: #111; }
+    .why-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
 
     .contact-card {
       position: relative;
@@ -391,6 +387,7 @@
       .nav-links { display: none; }
       .hero { padding-top: 48px; }
       .hero-grid, .why, .contact-layout, .coverage-grid { grid-template-columns: 1fr; }
+      .why-photo { min-height: 0; aspect-ratio: 16 / 9; }
       .logo-stage { min-height: 360px; order: -1; }
       .services-grid { grid-template-columns: 1fr; }
       .section-head { align-items: start; flex-direction: column; }
@@ -522,9 +519,9 @@
           </div>
           <p>Do diagnóstico à conclusão, cada serviço é executado com cuidado, clareza e atenção às necessidades do seu equipamento.</p>
         </div>
-        <div class="why-list">
-          <article class="why-item"><span class="n">01</span><h3>Atendimento técnico completo e transparente</h3><p>Diagnóstico cuidadoso e serviços executados com segurança em computadores, notebooks, impressoras e redes Wi-Fi. Cada etapa é explicada com clareza, desde a identificação do problema até a conclusão do atendimento.</p></article>
-        </div>
+        <figure class="why-photo">
+          <img src="Bancada.png" alt="Manutenção de componentes de um computador em bancada técnica" loading="lazy" />
+        </figure>
       </div>
     </section>
 
