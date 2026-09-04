@@ -484,6 +484,37 @@
     .logo-stage::after,
     .logo-stage .tech-lines { display: none; }
     .logo-wrap { filter: none; }
+    /* Shared type scale keeps equivalent headings consistent across sections. */
+    :root {
+      --title-size: clamp(2rem, 3.8vw, 2.75rem);
+      --subtitle-size: clamp(1.125rem, 1.8vw, 1.375rem);
+    }
+    h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); line-height: 1.1; letter-spacing: -.04em; }
+    .section-head h2, .why-main h2, .contact-card h2 {
+      font-size: var(--title-size); line-height: 1.15; letter-spacing: -.035em; font-weight: 800;
+    }
+    .service-card h3, .coverage-card h3, .payment strong {
+      font-size: var(--subtitle-size); line-height: 1.3; letter-spacing: -.02em; font-weight: 750;
+    }
+    .hero p, .section-head p, .why-main p, .contact-card p,
+    .service-card p, .coverage-card p { font-size: 1rem; line-height: 1.65; }
+    .eyebrow, .why-main .mini, .coverage-card .tag {
+      font-size: .75rem; line-height: 1.4; letter-spacing: .08em; font-weight: 800;
+    }
+    .hero, #pagamentos { position: relative; isolation: isolate; }
+    .hero::before, #pagamentos::before {
+      content: ""; position: absolute; top: 8px; right: 0;
+      width: min(46%, 420px); aspect-ratio: 360 / 160;
+      background: var(--ink); opacity: .22;
+      -webkit-mask: url("assets/circuitos.svg") center / contain no-repeat;
+      mask: url("assets/circuitos.svg") center / contain no-repeat;
+      pointer-events: none; z-index: -1;
+    }
+    [data-theme="dark"] .hero::before,
+    [data-theme="dark"] #pagamentos::before { opacity: .18; }
+    @media (max-width: 620px) {
+      .hero::before, #pagamentos::before { width: 48%; opacity: .12; }
+    }
   </style>
 </head>
 <body>
