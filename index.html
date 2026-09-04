@@ -472,6 +472,18 @@
     [data-theme="dark"] .why-main { box-shadow: inset 0 0 0 1px var(--line); }
     @media (max-width: 1100px) { .nav-links { gap: 14px; } .nav { gap: 12px; } }
     @media (max-width: 620px) { .theme-toggle .theme-label { display: none; } .nav-actions { gap: 8px; } }
+    /* Show only the logo, without a panel or decorative elements in either theme. */
+    .logo-stage,
+    [data-theme="dark"] .logo-stage {
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+      border-radius: 0;
+    }
+    .logo-stage::before,
+    .logo-stage::after,
+    .logo-stage .tech-lines { display: none; }
+    .logo-wrap { filter: none; }
   </style>
 </head>
 <body>
