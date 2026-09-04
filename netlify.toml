@@ -1,0 +1,28 @@
+[build]
+  command = "node scripts/build.mjs"
+  publish = "dist"
+[build.environment]
+  NODE_VERSION = "22"
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+[[redirects]]
+  from = "/area-tecnica"
+  to = "/.netlify/functions/private-area"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/area-tecnica/*"
+  to = "/.netlify/functions/private-area"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/login/"
+  to = "/login.html"
+  status = 200
+[[headers]]
+  for = "/login*"
+  [headers.values]
+    Referrer-Policy = "no-referrer"
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "no-store"

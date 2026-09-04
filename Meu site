@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <script>if (/(?:invite_token|recovery_token|confirmation_token|email_change_token)=/.test(location.hash)) location.replace('/login/' + location.hash);</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Serviços de informática, manutenção, formatação, impressoras e configuração de rede Wi-Fi." />
@@ -705,6 +706,7 @@
   <footer>
     <div class="container footer-row">
       <span>© <span id="year"></span> VM Técnico em Informática.</span>
+      <a href="/login/">Área técnica</a>
       <span>Serviços de informática • manutenção • impressoras • rede Wi‑Fi</span>
     </div>
   </footer>
