@@ -1,0 +1,70 @@
+#servicos { scroll-margin-top: 90px; }
+.services-carousel { min-width: 0; }
+.services-carousel .services-grid {
+  display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain; scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent; padding: 4px 0 14px;
+}
+.services-carousel .service-card {
+  flex: 0 0 calc((100% - 20px) / 2); min-width: 0; min-height: 0;
+  display: flex; flex-direction: column; padding: 0; gap: 0; overflow: hidden;
+  align-items: stretch; scroll-snap-align: start; scroll-snap-stop: always;
+}
+.services-carousel .service-card:hover { transform: none; }
+.service-photo { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: var(--surface-soft); }
+.service-body { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 16px; padding: 26px; align-items: start; }
+.service-body .service-icon { width: 44px; height: 44px; border-radius: 14px; }
+.service-body .service-icon svg { width: 24px; height: 24px; }
+.service-body h3 { margin: 0 0 10px; }
+.carousel-controls { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-top: 12px; }
+.carousel-controls[hidden] { display: none; }
+.carousel-counter { color: var(--muted); font-size: 13px; font-weight: 650; min-width: 130px; }
+.carousel-dots, .carousel-arrows { display: flex; align-items: center; gap: 8px; }
+.carousel-dot { width: 32px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; display: grid; place-items: center; }
+.carousel-dot::after { content: ''; width: 7px; height: 7px; border-radius: 20px; background: var(--line-strong); transition: width .2s ease, background .2s ease; }
+.carousel-dot[aria-current="true"]::after { width: 24px; background: var(--ink); }
+.carousel-arrow { width: 46px; height: 46px; border-radius: 50%; background: var(--surface); color: var(--ink); border: 1px solid var(--line); cursor: pointer; display: grid; place-items: center; }
+.carousel-arrow:hover:not(:disabled) { background: var(--surface-soft); border-color: var(--ink); }
+.carousel-arrow:disabled { opacity: .3; cursor: default; }
+.carousel-arrow svg { width: 22px; height: 22px; stroke: currentColor; stroke-width: 1.8; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.carousel-note { margin: 10px 0 0; color: var(--muted); font-size: 11px; }
+#services-track:focus-visible { outline: 2px solid var(--ink); outline-offset: 5px; border-radius: 22px; }
+@media (max-width: 700px) {
+  .services-carousel .services-grid { gap: 14px; }
+  .services-carousel .service-card { flex-basis: 92%; }
+  .service-body { padding: 20px; gap: 12px; grid-template-columns: 38px minmax(0, 1fr); }
+  .service-body .service-icon { width: 38px; height: 38px; border-radius: 12px; }
+  .carousel-controls { flex-wrap: wrap; gap: 4px 12px; }
+  .carousel-dots { order: 3; width: 100%; justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .carousel-dot::after { transition: none; }
+}
+
+/* Side navigation aligned with the center of the cards. */
+.services-carousel {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr) 46px;
+  column-gap: 14px;
+  align-items: center;
+}
+.services-carousel .services-grid { grid-column: 2; grid-row: 1; }
+.carousel-controls { display: contents; }
+.carousel-arrows { display: contents; }
+.carousel-arrow { grid-row: 1; }
+.carousel-arrow[data-direction="-1"] { grid-column: 1; }
+.carousel-arrow[data-direction="1"] { grid-column: 3; }
+.carousel-counter { grid-column: 2; grid-row: 2; justify-self: start; margin-top: 10px; }
+.carousel-dots { grid-column: 2; grid-row: 3; justify-self: center; }
+.carousel-note { grid-column: 2; grid-row: 4; }
+@media (max-width: 700px) {
+  .services-carousel { grid-template-columns: 44px minmax(0, 1fr) 44px; column-gap: 6px; }
+  .carousel-arrow { width: 44px; height: 44px; }
+  .services-carousel .service-card { flex-basis: 100%; }
+  .service-body { display: block; padding: 16px; }
+  .service-body .service-icon { margin-bottom: 12px; }
+  .service-body h3 { overflow-wrap: anywhere; }
+  .carousel-dots { gap: 0; }
+  .carousel-dot { width: 28px; }
+}
