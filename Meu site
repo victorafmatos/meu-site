@@ -688,7 +688,7 @@
             <path d="m10 17 8 0 6 6 6-6h8M10 23h8l6-6 6 6h8" stroke-linejoin="round" />
           </svg>
           <div style="flex:1">
-            <strong>Pix à vista</strong>
+            <strong>Dinheiro ou pix à vista</strong>
           </div>
         </div>
         <div class="payment">
