@@ -30,12 +30,27 @@
     body {
       margin: 0;
       color: var(--ink);
-      background:
-        radial-gradient(circle at 10% 10%, rgba(0,0,0,.035) 0 1px, transparent 1.5px) 0 0 / 22px 22px,
-        var(--bg);
+      min-height: 100%;
+      position: relative;
+      isolation: isolate;
+      background: transparent;
       font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       -webkit-font-smoothing: antialiased;
       text-align: left;
+    }
+    html { background: var(--bg); }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background: url("assets/fundo-tecnologico-claro.png") center / cover no-repeat;
+      opacity: var(--background-fade, .32);
+      transition: opacity .12s linear;
+    }
+    [data-theme="dark"] body::before {
+      background-image: url("assets/fundo-tecnologico-escuro.png");
     }
 
     a { color: inherit; text-decoration: none; }
@@ -724,8 +739,22 @@
       document.documentElement.dataset.theme = theme;
       try { localStorage.setItem('vm-theme', theme); } catch { /* Works even when storage is unavailable. */ }
       updateThemeButton();
+      updateBackgroundFade();
     });
     updateThemeButton();
+    let backgroundFrame;
+    function updateBackgroundFade() {
+      const pageHeight = Math.max(document.documentElement.scrollHeight - innerHeight, 1);
+      const progress = Math.min(Math.max(scrollY / pageHeight, 0), 1);
+      const maximum = document.documentElement.dataset.theme === 'dark' ? .3 : .34;
+      document.body.style.setProperty('--background-fade', String(maximum * (1 - progress)));
+      backgroundFrame = undefined;
+    }
+    addEventListener('scroll', () => {
+      if (!backgroundFrame) backgroundFrame = requestAnimationFrame(updateBackgroundFade);
+    }, { passive: true });
+    addEventListener('resize', updateBackgroundFade);
+    updateBackgroundFade();
   </script>
 </body>
 </html>
