@@ -517,20 +517,6 @@
     .eyebrow, .why-main .mini, .coverage-card .tag {
       font-size: .75rem; line-height: 1.4; letter-spacing: .08em; font-weight: 800;
     }
-    .hero, #pagamentos { position: relative; isolation: isolate; }
-    .hero::before, #pagamentos::before {
-      content: ""; position: absolute; top: 8px; right: 0;
-      width: min(46%, 420px); aspect-ratio: 360 / 160;
-      background: var(--ink); opacity: .22;
-      -webkit-mask: url("assets/circuitos.svg") center / contain no-repeat;
-      mask: url("assets/circuitos.svg") center / contain no-repeat;
-      pointer-events: none; z-index: -1;
-    }
-    [data-theme="dark"] .hero::before,
-    [data-theme="dark"] #pagamentos::before { opacity: .18; }
-    @media (max-width: 620px) {
-      .hero::before, #pagamentos::before { width: 48%; opacity: .12; }
-    }
   </style>
   <link rel="stylesheet" href="assets/carrossel.css" />
   <script src="assets/carrossel.js" defer></script>
