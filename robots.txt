@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://victormatosti.com.br/sitemap.xml
