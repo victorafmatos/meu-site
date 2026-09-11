@@ -1,7 +1,7 @@
 import { mkdir, copyFile, cp } from 'node:fs/promises';
 import { build } from 'esbuild';
 await mkdir('dist/assets', { recursive: true });
-for (const file of ['index.html', 'assets/logo.webp', 'assets/bancada.webp', 'robots.txt', 'sitemap.xml', 'login.html', 'assets/auth.css']) {
+for (const file of ['index.html', 'assets/logo.webp', 'assets/favicon.png', 'assets/bancada.webp', 'robots.txt', 'sitemap.xml', 'login.html', 'assets/auth.css']) {
   await copyFile(file, `dist/${file}`);
 }
 await copyFile('assets/fundo-tecnologico-claro.webp', 'dist/assets/fundo-tecnologico-claro.webp');
